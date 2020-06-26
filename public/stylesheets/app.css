@@ -1,0 +1,497 @@
+/* Css Files for app */
+#landing-header {
+		color:white;
+	    z-index: 1;
+		position: relative;
+		text-align: center;
+		padding-top: 14rem;
+    	padding-bottom: 17rem; 
+	}
+		
+/* 		Background Slider */
+		
+				
+.slideshow { 
+  /* position: fixed; */
+  width: 80%;
+  height: 60%;
+  top: 0;
+  left: 0;
+  bottom:10;
+  list-style: none;
+  margin: 0;
+  padding: 0px;
+}
+
+.slideshow li { 
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover; 
+  background-position: 50% 50%; 
+  background-repeat: no-repeat;
+  opacity: 0;
+  z-index: 0;
+  animation: imageAnimation 50s linear infinite; 
+}
+
+.slideshow li:nth-child(1) { 
+  background-image: url(https://images.adsttc.com/media/images/5645/3e2a/e58e/ce94/e500/020b/slideshow/Virmueller_Ahmedabad_11th_April_2015_%C2%A9_andr%C3%A9_j_fanthome0093b.jpg?1447378459) 
+}
+		
+.slideshow li:nth-child(2) { 
+  background-image: url(https://pbs.twimg.com/media/DcmR_FLXcAEF2Cz.jpg);
+  animation-delay: 6s; 
+}
+.slideshow li:nth-child(3) { 
+  background-image: url(https://images.shiksha.com/mediadata/images/1488871812phpVZx9ed.jpeg);
+  animation-delay: 12s; 
+}
+.slideshow li:nth-child(4) { 
+  background-image: url(https://ahduni.edu.in/assets/images/campus/campus4.jpg);
+  animation-delay: 18s; 
+}
+.slideshow li:nth-child(5) { 
+  background-image: url(https://ahduni.edu.in/assets/images/default/default18.jpg);
+  animation-delay: 24s; 
+}
+
+@keyframes imageAnimation { 
+  0% { 
+    opacity: 0; 
+    animation-timing-function: ease-in;
+  }
+  10% {
+    opacity: 1;
+    animation-timing-function: ease-out;
+  }
+  20% {
+    opacity: 1
+  }
+  30% {
+    opacity: 0
+  }
+}
+.no-cssanimations .slideshow li {
+    opacity: 1;
+}
+		
+/* 		Background Slider Finish */
+		
+		
+/* 	This is for Home Page	 */
+		h1 {
+		    font-weight: 500;
+			font-size: 5em;
+			font-family: 'Oswald', sans-serif;
+			color :#d7f7f6;
+		}
+		h2 {
+		    font-weight: 400;
+			font-size: 4em;
+			font-family: 'Oswald', sans-serif;
+			color :#d7f7f6;
+		}
+		.jumbotron.purpose{
+			margin-right:25px;
+		}
+		.jumbotron.aboutus{
+			margin-left:25px;
+		}
+		
+		
+/* 	Css for navbar	 */
+		#main-navbar .navbar-brand{
+			color : #EA1C2C;
+			font-size: 1.7rem;
+			font-weight: 100;
+		}
+		#main-navbar{
+			font-size: 1.8rem;
+			font-weight: 100;
+			
+			
+		}
+		#main-navbar .nav-link{
+			color: white;
+			font-weight:90;
+		}
+			
+		#main-navbar .rightitems{
+			padding-left: 950px;
+			color : white;
+		}
+
+		#main-navbar .rightitems .nav-link{
+			font-weight:90;
+			color:white;
+		}
+		#main-navbar .rightitems .sgnout{
+			font-weight:90;
+			color:white;
+			padding-left:10px;
+		}
+		#main-navbar .nav-link:hover {
+			color: red;
+		}
+		.content {
+			margin-bottom: 50px;
+		}
+		#srheading h2 {
+			font-size: 50px;
+			font-weight: 100;
+			color: #0c7475;
+		}
+		#srheading p {
+			font-size: 20px;
+			font-weight: 100;
+			color: black ;
+		}
+		#frheading h2 {
+			font-size: 50px;
+			font-weight: 100;
+			color: #0c7475;
+		}
+		#frheading p {
+			font-size: 20px;
+			font-weight: 100;
+			color: black ;
+		}
+		.navbar.scrolled {
+			background-color:#540345;
+			transition: background 700ms;
+		}
+		.info{
+			background-color:  #faf1f0;
+		}
+		
+/* 	Css for reg Form Page	 */
+		.detailcampusvisit{
+			padding-top : 70px;
+			padding-bottom : 20px;
+		}
+		.newreg{
+			/* background:url("https://image.freepik.com/free-photo/abstract-blur-defocused-bookshelf-library_1203-			9640.jpg"); */
+			background:url("https://image.freepik.com/free-photo/empty-wood-table-top-blurred-background-montage-your-products_7182-71.jpg");
+			  background-repeat: no-repeat;
+			  background-attachment: scroll;
+			  background-position: center center;
+			  background-size: cover;
+			  padding-top:20px;
+			  padding-bottom:2px;
+		}
+		#campusvisit h2 {
+			font-size: 50px;
+			font-weight: 100;
+			color: #0c7475;
+		}
+		#campusvisit p {
+			font-size: 25px;
+			font-weight: 100;
+			color: #94036c ;
+		}
+		.jumbotron.infovisit{
+			margin-left:30px;
+			background:white;
+		}
+		.regform{
+			padding-bottom:80px;
+		}
+		
+		
+/* 	Css for /verification1 Page	 */
+		.verif{
+			color : green;
+		}
+		
+		header.verifemail {
+			  background-image: url("https://getflywheel.com/wp-content/uploads/2015/08/free-blurred-backgrounds.jpg");
+			  background-repeat: no-repeat;
+			  background-attachment: scroll;
+			  background-position: center center;
+			  background-size: cover;
+			  padding-top: 6rem;
+			  padding-bottom:3.74rem;
+			}
+		
+			header.verifemail1 {
+			  background-image: url("https://getflywheel.com/wp-content/uploads/2015/08/free-blurred-backgrounds.jpg");
+			  background-repeat: no-repeat;
+			  background-attachment: scroll;
+			  background-position: center center;
+			  background-size: cover;
+			  padding-top: 5.5rem;
+			  padding-bottom:3.4rem;
+			}
+		
+		
+/* 		For User Page		 */
+		#userpage {
+			  padding-top: 10.5rem;
+			  padding-bottom: 6rem;
+			  text-align: center;
+			  /* color: #fff; */
+			    background-image: url("https://image.freepik.com/free-vector/abstract-futuristic-background_23-2148399335.jpg"); 
+			/* background-image: url("https://image.freepik.com/free-photo/light-cyan-background-from-textile-material-with-wicker-pattern-closeup_113767-868.jpg");   */
+			  /* background-image: url("https://c4.wallpaperflare.com/wallpaper/992/950/442/white-gray-gradation-blur-wallpaper-preview.jpg"); */
+			  background-repeat: no-repeat;
+			  background-attachment: scroll;
+			  background-position: center center;
+			  background-size: cover;
+			  padding-top: 14rem;
+    		  padding-bottom: 10.5rem;
+			} 
+.user_container{
+	border:2px solid white;
+	height : 550px;
+	width : 480px;
+	background-color:white;
+	text-align:center;
+	color:black;
+	/* background-color:#c3f7d2; */
+}
+.user_container h1{
+	color:black;
+	background-color:#f7c7c6;
+}
+
+
+
+/*  Css file for login page ...*/
+			header.loginpage{
+			  background-image: url('http://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg');
+			  background-repeat: no-repeat;
+			  background-attachment: scroll;
+			  background-position: center center;
+			  background-size: cover;
+			  padding-top: 9.5rem;
+    		  padding-bottom: 11.3rem;
+height: 100%;
+font-family: 'Numans', sans-serif;
+}
+
+.loginpage .container{
+height: 100%;
+align-content: center;
+}
+
+.card{
+height: 370px;
+margin-top: 50px;
+padding-top: 50px;
+margin-bottom: auto;
+width: 400px;
+background-color: rgba(0,0,0,0.5) !important;
+}
+
+.social_icon span{
+font-size: 60px;
+margin-left: 10px;
+color: #FFC312;
+}
+
+.social_icon span:hover{
+color: white;
+cursor: pointer;
+}
+
+.card-header h3{
+color: white;
+}
+
+.social_icon{
+position: absolute;
+right: 20px;
+top: -45px;
+}
+
+.input-group-prepend span{
+width: 50px;
+background-color: #FFC312;
+color: black;
+border:0 !important;
+}
+
+input:focus{
+outline: 0 0 0 0  !important;
+box-shadow: 0 0 0 0 !important;
+
+}
+
+.remember{
+color: white;
+}
+
+.remember input
+{
+width: 20px;
+height: 20px;
+margin-left: 15px;
+margin-right: 5px;
+}
+
+.login_btn{
+color: black;
+background-color: #FFC312;
+width: 100px;
+}
+
+.login_btn:hover{
+color: black;
+background-color: white;
+}
+
+.links{
+color: white;
+}
+
+.links a{
+margin-left: 4px;
+}
+
+/*  Css file for Signup page ...*/
+			header.signuppage{
+			  background-image: url('http://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg');
+			  background-repeat: no-repeat;
+			  background-attachment: scroll;
+			  background-position: center center;
+			  background-size: cover;
+			  padding-top: 9.5rem;
+    		  padding-bottom: 11.3rem;
+height: 100%;
+font-family: 'Numans', sans-serif;
+}
+
+.loginpage .container{
+height: 100%;
+align-content: center;
+}
+
+.card{
+height: 370px;
+margin-top: 50px;
+padding-top: 50px;
+margin-bottom: auto;
+width: 400px;
+background-color: rgba(0,0,0,0.5) !important;
+}
+
+.social_icon span{
+font-size: 60px;
+margin-left: 10px;
+color: #FFC312;
+}
+
+.social_icon span:hover{
+color: white;
+cursor: pointer;
+}
+
+.card-header h3{
+color: white;
+}
+
+.social_icon{
+position: absolute;
+right: 20px;
+top: -45px;
+}
+
+.input-group-prepend span{
+width: 50px;
+background-color: #FFC312;
+color: black;
+border:0 !important;
+}
+
+input:focus{
+outline: 0 0 0 0  !important;
+box-shadow: 0 0 0 0 !important;
+
+}
+
+.remember{
+color: white;
+}
+
+.remember input
+{
+width: 20px;
+height: 20px;
+margin-left: 15px;
+margin-right: 5px;
+}
+
+.login_btn{
+color: black;
+background-color: #FFC312;
+width: 100px;
+}
+
+.login_btn:hover{
+color: black;
+background-color: white;
+}
+
+.links{
+color: white;
+}
+
+.links a{
+margin-left: 4px;
+}
+
+/*  */
+
+/* Request Page  */
+
+header.reqpage{
+	background-image: url('https://i.pinimg.com/originals/2c/0e/d4/2c0ed43c8b8b3ed5c86387cd84cb4411.jpg');
+ 	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-position: center center;
+	background-size: cover;
+	padding-top: 9.5rem;
+    padding-bottom: 11.3rem;
+height: 100%;
+font-family: 'Numans', sans-serif;
+}
+.requestpage{
+	background-color:#ff597e;
+	font-size:10px;
+	margin-top:110px;
+}
+
+/* CSs for record show admin */
+header.record{
+	padding-top:9.5rem;
+	font-weight: 200;
+			font-size: 1.2em;
+			font-family: 'Oswald', sans-serif;
+			color :black;
+}
+
+
+/*  New Classes For cssanimations*/
+.hvr-grow {
+    display: inline-block;
+    vertical-align: middle;
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    transition-duration: 0.3s;
+    transition-property: transform;
+}
+
+.hvr-grow:hover,
+.hvr-grow:focus,
+.hvr-grow:active {
+    transform: scale(1.1);
+}
+
+
+
+		

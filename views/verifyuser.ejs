@@ -1,0 +1,110 @@
+<html>
+<head>
+	<title>VMS</title>
+	<link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+	
+	<style type="text/css">
+		.data{
+			padding-top:250px;
+			
+		}
+		body{
+			background-color:#bdeef2;
+			font-family: 'Roboto', sans-serif;
+		}
+	</style>
+	
+</head>
+<body>
+<div class="ui main text container segment data">
+	<div class="ui huge header">Verification of User for GatePass</div>
+	<div class = "item">
+		<div>
+			<span>
+			<%= foundData.date.toDateString() %>
+			</span>
+				
+					
+		</div>
+		<div>
+			<span>
+				<%= foundData.name %>
+			</span>
+						
+		</div>
+		<div>
+			<span>
+				<%= foundData.email %>
+			</span>
+					
+		</div>
+		<div>
+			<span>
+					<%= foundData.building %>
+			</span>
+					
+		</div>
+		<div>
+			<span>
+				<%= foundData.phone %>
+			</span>
+		</div>
+		<div>
+			<span>
+			<hr>
+			</span>
+		</div>
+	</div>	
+		
+	<div class="forms">
+  <form action="/verifyuser/<%= id %>" method="POST">	
+	  <div class="content">
+		  <span>
+			<label>Select To Allow User or Not</label>
+			 <select class="browser-default custom-select" name="value">
+  			<option selected value="true">Allow User</option>
+  			<option value="false">Don't Allow User</option>
+       </select>
+		  </span>
+		
+	  </div>
+	  <div class="content">
+		  <span>
+			  	<label>Allowed Gate</label>
+		<select class="browser-default custom-select" name="gateno"> 
+  			<option selected value="GATE1">GATE 1</option>
+  			<option value="GATE2">GATE 2</option>
+			<option value="GATE3">GATE 3</option>
+       </select>
+		  </span>
+		
+	  </div>
+	  <div class="content">
+		  <label>Allowed Security Guard</label>
+		  <span>
+		  		<select class="browser-default custom-select" name="security_guard">
+		  	<option selected value="PERSON1">PERSON 1</option>
+  			<option value="PERSON2">PERSON 2</option>
+			<option value="PEROSN3">PERSON 3</option>
+		 </select>
+		  </span>
+
+	  </div> 
+	  <div>
+		<button class="ui big blue basic button">
+			<span>
+				Submit
+			</span>	
+		</button>
+	  </div>
+
+  </form>
+		
+	</div>
+</div>	
+	
+</body>
+</html>

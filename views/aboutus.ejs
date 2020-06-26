@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>VMS</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<style type="text/css">
+		body{
+			    background: #fefff7;
+    font-family: "Nunito", sans-serif;
+		}
+		#main-navbar .navbar-brand{
+			color : #EA1C2C;
+		}
+		#main-navbar{
+			font-size: 1.5rem;
+			font-weight: 200
+		}
+		#main-navbar .nav-link{
+			color: #998809;
+		}
+		#main-navbar .nav-link:hover {
+			color: red;
+		}
+		#frheading span{
+			color: red;
+		}
+		#frheading .Museum {
+			font-size: 50px;
+			font-weight: 100;
+		}
+		#srheading h2 {
+			font-size: 50px;
+			font-weight: 100;
+			color: #b00080;
+		}
+		#srheading p {
+			font-size: 20px;
+			font-weight: 100;
+			color: #94036c ;
+		}
+		.content {
+			margin-top: 100px;
+			margin-bottom: 100px;
+		}
+		.navbar.scrolled {
+			background-color: #540345;
+			transition: background 700ms;
+		}
+		#main-navbar .rightitems{
+			padding-left: 950px;
+			color : white;
+		}
+
+	</style>
+</head>
+<body>
+<!-- Navbar -->
+<nav id="main-navbar" class="navbar navbar-expand-md navbar-dark py-0 fixed-top">
+  <a class="navbar-brand" href="#"> <header> <img src="https://upload.wikimedia.org/wikipedia/en/3/3a/Ahmedabad_University_logo.png" width="30" height="30"></header></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/home">HOME</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/aboutus">ABOUT US</a>
+      </li>
+    </ul>
+	  
+	  <ul class="nav navbar-nav navbar-right rightitems ">
+		  <% if(!currentUser){ %>
+	             <li class="nav-item">
+	              <a class="nav-link" href="/login">Login</a>
+                 </li>
+                 <li class="nav-item">
+                   <a class="nav-link" href="/register">Sign Up</a>
+                 </li>
+          <% } else { %>
+                 <li class="nav-item">
+					 <a class="nav-link" href="#"><%= currentUser.username %></a></li>
+				<li class="nav-item sgnout">
+        			<a class="nav-link" href="/logout">Sign Out</a>
+      			</li>		
+                  <% } %>
+	  
+	    
+	  </ul>
+  </div>
+</nav>
+
+<!-- first row -->
+<section class="container-fluid px-0">
+	<div class="row align-items-center content">
+		<div class="col-lg-6">
+			<div id="srheading" class="text-pink text-center">
+			<h2 class="Museum">SEAS</h2>
+			<p class="Museum">
+				The School of Engineering and Applied Science, Ahmedabad University, offers BTech, MTech and PhD programmes in a range of disciplines. Our student-centric pedagogy, project-based approach and a design-driven curriculum is meant to give graduates an aptitude for complex problem solving, design and innovation, and lifelong learning.
+			</p>
+			</div>
+			<!-- <h2 class="text-center">MUSEUM OF CANDY</h2> -->
+		</div>
+		<div class="col-lg-6">
+			<img class="img-fluid" src="https://images.shiksha.com/mediadata/images/1582025212php5Tw5cb.png">
+		</div>
+	</div>
+
+
+	<!-- Second ROw -->
+	<div class="row align-items-center content">
+		<div class="col-lg-6 order-2 order-lg-1">
+			<img class="img-fluid" src="https://ohcampus.com/uploads/college/SCS6402868001.jpg">
+		</div>
+
+		<div class="col-lg-6 col-md-10 order-1 order-lg-2 mb-5 mb-md-0">
+			<div id="srheading" class="text-pink text-center">
+			<h2 class="Museum">SCS</h2>
+			<!-- <img src="https://ohcampus.com/uploads/college/SCS6402868001.jpg"> -->
+			<p class="Museum">
+					The School of Computer Studies was established in 2000 by the Ahmedabad Education Trust to provide education to students seeking specialised programmes in information technology, creating a focused environment in which to achieve academic excellence and take the first steps to building rewarding careers.
+
+					The school, formerly known as the Ahmedabad Educational Trust Institute of Computer Studies, is is a constituent of Ahmedabad University, committed to providing a liberal education and rigorous interdisciplinary learning to all our students. Currently, we offer a post-graduate Master of Computer Applications programme and a five-year integrated MCA programme. 
+			</p>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- Third Row -->
+	<div class="row align-items-center content">
+		<div class="col-lg-6 mb-5 mb-md-0">
+			<div id="srheading" class="text-pink text-center">
+			<h2 class="Museum">SAS</h2>
+			<!-- <img src="D:\Udemy\Web Dev\bootstrap4/lolli_icon.png"> -->
+			<p class="Museum">
+						The School of Arts and Sciences forms the core of Ahmedabad University’s educational experience. We offer undergraduate and graduate learning to the highest standards in a variety of academic disciplines, spanning the range from visual arts to life sciences, from physics to history.
+
+						Committed to offering students an excellent liberal education, the School practices collaborative, inter-disciplinary learning. We support a stimulating intellectual environment that enables our faculty and students to excel in their scholarship, develop new knowledge and build rewarding careers. The School of Arts and Sciences asserts the centrality of the arts and sciences in a broad, fulfilling education and a diverse public sphere.
+			</p>
+			</div>
+			<!-- <h2 class="text-center">MUSEUM OF CANDY</h2> -->
+		</div>
+		<div class="col-lg-6">
+			<img class="img-fluid" src="https://pbs.twimg.com/media/EL5tuHCU8AE9qzK.jpg">
+		</div>
+	</div>
+
+	<!-- Fourth  Row -->
+	<div class="row align-items-center content">
+		<div class="col-lg-6 order-2 order-lg-1">
+			<img class="img-fluid" src="https://cdn.collegebol.com/media/college_header_image/amrut-mody-school-of-management-ahmedabad-university-amsom-ahmedabad.jpg">
+		</div>
+
+		<div class="col-lg-6 col-md-10 order-1 order-lg-2 mb-5 mb-md-0">
+			<div id="srheading" class="text-pink text-center">
+			<h2 class="Museum">AMSOM</h2>
+			<!-- <img src="https://cdn.collegebol.com/media/college_header_image/amrut-mody-school-of-management-ahmedabad-university-amsom-ahmedabad.jpg"> -->
+			<p class="Museum">
+				
+		The Amrut Mody School of Management offers wide-ranging, multi-faceted management education through undergraduate, graduate and doctoral programmes. We also offer short-term certificate programmes for working professionals and other practitioners.
+
+		The Management School is located in the heart of Ahmedabad, one of India’s most vibrant and historic centres of commerce. Its mercantile and industrial history underscore its present-day reputation as a hub of enterprise and new business ideas. In addition to its bustling streets, markets and sophisticated cultural life, the city is also home to many of India’s most reputed educational institutions, making it uniquely liveable for students and academics.
+			</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+	<script>
+        $(function () {
+            $(document).scroll(function () {
+                var $nav = $("#main-navbar");
+                $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
+            });
+        });
+    </script>
+
+</body>
+</html>

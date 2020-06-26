@@ -1,0 +1,94 @@
+<html>
+<head>
+	<title>VMS</title>
+	<link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+	<style type="text/css">
+		.data{
+			padding-top:250px;
+			font-family: 'Roboto', sans-serif;
+		}
+		body{
+			background-color:#bdeef2;
+		}
+	</style>
+	
+</head>
+<body>
+<div class="ui main text container segment data">
+	<div class="ui huge header">This is your Gatepass</div>
+		<div class="ui top attached segment">
+			<div class="item">
+				<img class="ui centered rounded image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTjyVz1WdtD12j-fU5MP034SZWHpY_So9Zd3w&usqp=CAUs">
+				
+				<div id="pass">
+					<div>
+					<span>
+						<%= foundData.date.toDateString() %>
+					</span>
+					</div>
+					<div>
+					<span>
+						<%= foundData.name %>
+					</span>
+					</div>
+					<div>
+					<span>
+						<%= foundData.email %>
+					</span>
+					</div>
+					<div>
+			     	<span>
+						<%= foundData.building %>
+					</span>
+					</div>
+					<div>
+				    <span>
+						<%= foundData.gateno %>
+					</span>
+					</div>
+					<div>
+					<span>
+							Security_Guard:
+						<%= foundData.security_guard %>
+					</span>	
+					</div>
+
+						
+				</div>
+    		<input class="ui green basic button"type="button" id ="dbtn" value="Download">  
+			</div>	
+		</div>
+</div>	
+
+
+<script>
+
+    function download(filename, text) {
+    var element = document.createElement('a');
+    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+    element.setAttribute('download', filename);
+
+    element.style.display = 'none';
+    document.body.appendChild(element);
+
+    element.click();
+
+    document.body.removeChild(element);
+}
+
+// Start file download.
+document.getElementById("dbtn").addEventListener("click", function(){
+    // Generate download of hello.txt file with some content
+    var text = document.getElementById("pass").textContent;
+    var filename = "hello.txt";
+
+    download(filename, text);
+}, false);
+</script>
+	
+
+</body>
+</html>

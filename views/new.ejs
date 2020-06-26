@@ -1,0 +1,85 @@
+<%- include("header") %>
+
+<!-- Details about Campus Visit-->
+<header class="newreg">
+	
+	<div class="detailcampusvisit">
+		<section class="container-fluid px-0">
+	<div class="row align-items-center content">
+		<div class="col-lg-6">
+			<div id="campusvisit" class="text-white text-center d-none d-lg-block">
+			<h2 class="campusvisit">CAMPUS VISIT</h2>
+			<div class="jumbotron infovisit">
+				<p class="campusvisit font-weight-bold">Welcome to Ahmedabad Univeristy...
+				For Campus Visit You have to fill the required details mention in the registration form below.
+				</p>
+			</div>	
+
+			</div>
+		</div>
+		<div class="col-lg-6">
+			<img class="img-thumbnail" src="https://images.static-collegedunia.com/public/college_data/images/appImage/15004638321443182500AHMEDABADUNIVERSITYNEW.jpg">
+		</div>
+	</div>
+</div>
+
+		
+<!-- REg form	 -->
+
+<div class="regform" style=" margin: 40px auto">
+	<div class="ui main text container segment">
+	<div class="ui huge header">Registration for Campus Visit</div>
+<!-- 	New form for post request or creating a new blog -->
+<form action="/verification" class="ui form" style="width:70%; margin: 40px auto" method="POST">
+		
+  <div class="field" required>
+	 <div class="ui left icon input">
+	  <i class="users icon"></i> 
+      <input type="Date" name="date" >		 
+	 </div> 
+  </div>
+	
+  <div class="field " required>
+	  <div class="ui left icon input">
+		 <i class="user circle outline icon"></i>
+		<input type="text" name="name" placeholder="Enter your Name">
+	   </div>		   
+  </div>
+	
+  <div class="field" required>
+  <div class="ui left icon input">
+	<i class="phone square icon"></i>
+    <input type="text" name="phone" placeholder="Enter your 10 digit mobile number">
+  </div>
+ </div>
+ 
+  <div class="field" required>
+  <div class="ui left icon input"> 
+	<i class="envelope outline icon"></i> 
+    <input type="email" name="email" placeholder="Enter your Email id">
+  </div>
+  </div>	  
+	  
+  <div class="field">
+  <div class="ui left icon input"> 
+	  <label>Select Campus</label>
+ <select class="browser-default custom-select" name="building">
+  <option selected>Select</option>
+  <option value="SEAS">SEAS</option>
+  <option value="SAS">SAS</option>
+  <option value="SCS">SCS</option>
+  <option value="AMSOM">AMSOM</option>
+</select>	
+  </div>
+</div> 
+	<button class="ui big blue basic button" type="submit">Submit</button>
+</form>
+</div>
+</div>
+	
+	
+</header>
+
+
+
+<%- include("footer") %>
