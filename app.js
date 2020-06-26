@@ -428,7 +428,7 @@ app.post("/adminpage",function(req,res){
 	var uname = req.body.username;
 	var pass = req.body.password;
 	
-	if(uname == "admin" && pass == "admin@123"){
+	if(uname == "admin" && pass == "xxxxxxxxxx"){
 		res.redirect("/details")
 	}
 	else{
